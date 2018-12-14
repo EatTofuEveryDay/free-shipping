@@ -1,3 +1,4 @@
+#include<map>
 std::map<char, int> mapA {
 {'A', 4},
 {'B', -1},
