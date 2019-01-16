@@ -10,3 +10,4 @@ Live demos:
 - v1.3:   http://free-shipping-v13.eattofueveryday.repl.run
 - v1.3.1: http://free-shipping-v131.eattofueveryday.repl.run
 - v1.4:   http://free-shipping-v14.eattofueveryday.repl.run
+- v1.5:   http://free-shipping-v15.eattofueveryday.repl.run
