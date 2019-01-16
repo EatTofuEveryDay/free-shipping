@@ -102,7 +102,7 @@ void gmenu(){
     "Calculate Average"
   };
   for(;;){
-    std::cout << "\n\n\n\n\n\n\033[38;5;21mFree shipping v1.3.1\n\rWarning: this engine is highly optimistic.\n\rI take no responsibility for any emotional distress.\n\r\033[0m";
+    std::cout << "\n\n\n\n\n\n\033[38;5;21mFree shipping v1.4\n\rWarning: this engine is highly optimistic.\n\rI take no responsibility for any emotional distress.\n\r\033[0m";
     for(int i = 0; i < opts.size(); i++){
       if(i == slec)
         std::cout << "\033[107m\033[30m";
