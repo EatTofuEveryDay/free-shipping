@@ -181,7 +181,7 @@ void proc(){
     out << "[\033[38;5;196m\u2764\033[0m-+-\033[38;5;196m\u2764\033[0mMatchmaking\033[38;5;196m\u2764\033[0m-+-\033[38;5;196m\u2764\033[0m]\n\r"
         << "\033[38;5;196mAverage for \033[0m" << names[0] << ":\n\r"
         << "\033[38;5;196mAvg: " << total << "%\n\r"
-        << "[\033[38;5;196m\u2764\033[0m-+-\033[38;5;196m\u2764\033[0mMatchmaking\033[38;5;196m\u2764\033[0m-+-\033[38;5;196m\u2764\033[0m]\n\r";
+        << "\033[0m[\033[38;5;196m\u2764\033[0m-+-\033[38;5;196m\u2764\033[0mMatchmaking\033[38;5;196m\u2764\033[0m-+-\033[38;5;196m\u2764\033[0m]\n\r";
   }else{
     abort();
   }
@@ -195,14 +195,14 @@ int main() {
     std::cout << "Finished\n\r";
     std::string s = out.str();
     std::cout << s;
-    std::fstream fout("out.txt", std::ios::app);
+    std::fstream fout("out.txt", std::ios::w);
     bool inescape = false;
     for(char c : s){
       if(c == '\033')
         inescape = true;
-      if(c == 'm')
+      else if(c == 'm'){
         inescape = false;
-      if(!inescape) fout << c;
+      }else if(!inescape) fout << c;
     }
     fout.close();
   }
