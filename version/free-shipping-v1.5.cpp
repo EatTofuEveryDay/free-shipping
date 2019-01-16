@@ -195,7 +195,7 @@ int main() {
     std::cout << "Finished\n\r";
     std::string s = out.str();
     std::cout << s;
-    std::fstream fout("out.txt", std::ios::w);
+    std::fstream fout("out.txt", std::ios::out);
     bool inescape = false;
     for(char c : s){
       if(c == '\033')
