@@ -188,6 +188,7 @@ void proc(){
 }
 
 int main() {
+  std::cout << "Free shipping v1.5\n";
   for(;;){
     out.str("");
     ginput();
